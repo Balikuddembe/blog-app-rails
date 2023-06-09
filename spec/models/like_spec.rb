@@ -11,7 +11,7 @@ RSpec.describe Like, type: :model do
     expect(@like).to be_valid
   end
 
-  it 'update_likes_counter should increse likes' do
+  it 'update_likes_counter should increase likes' do
     Like.create(author: @user, post: @post)
     expect(@post.likes_counter).to eq 1
   end
