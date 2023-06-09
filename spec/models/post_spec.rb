@@ -47,5 +47,9 @@ RSpec.describe Post, type: :model do
     it 'should return recent comments count' do
       expect(@post1.recent_comments.count).to eql(5)
     end
+
+    it 'updates the posts_counter of the author' do
+      expect { @post.send(:update_post_counter) }.to change { @user.reload.posts_counter }.by(0)
+    end
   end
 end
