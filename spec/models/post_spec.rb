@@ -33,10 +33,10 @@ RSpec.describe Post, type: :model do
 
   describe 'methods in post' do
     before do
-        @user = User.create(name: 'balix', photo: 'https://unsplash.com/es/fotos/W5nhsrznVp0', bio: 'coder from Uganda')
-        @post1 = Post.create(author: @user, title: 'My post', text: 'Hello!')
-        6.times do
-           Comment.create(post: @post1, author: @user, text: 'Hi Tom!')
+      @user = User.create(name: 'balix', photo: 'https://unsplash.com/es/fotos/W5nhsrznVp0', bio: 'coder from Uganda')
+      @post1 = Post.create(author: @user, title: 'My post', text: 'Hello!')
+      6.times do
+        Comment.create(post: @post1, author: @user, text: 'Hi Tom!')
       end
     end
 
