@@ -38,4 +38,22 @@ RSpec.describe 'User show', type: :feature do
   scenario 'Show the number of comments for a post' do
     expect(page).to have_content('Comments: 3')
   end
+  
+  scenario 'Show the number of likes for a post' do
+    expect(page).to have_content('Likes: 2')
+  end
+
+  scenario 'Show the content of a post' do
+    expect(page).to have_selector('.post-text', text: 'This is my first post!')
+  end
+
+  scenario 'Show the username of all commenters' do
+    expect(page).to have_selector('.commenter-identifier', text: 'Balix', count: 3)
+  end
+
+  scenario 'Show the comment of all commenter' do
+    expect(page).to have_selector('.commenter-identifier', text: 'Balix' && 'First comment')
+    expect(page).to have_selector('.commenter-identifier', text: 'Balix' && 'Second comment')
+    expect(page).to have_selector('.commenter-identifier', text: 'Balix' && 'Third comment')
+  end
 end
