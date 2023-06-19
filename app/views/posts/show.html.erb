@@ -17,7 +17,7 @@
   <p>Post has no comments yet</p>
   <%else%>
   <% @post.all_comments.each do |comment| %>
-    <p><%= comment.author.name %>: <%= comment.text %></p>
+    <p class="commenter-identifier"><%= comment.author.name %>: <%= comment.text %></p>
   <% end %>
   <% end %>
 </div>
