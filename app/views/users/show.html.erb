@@ -1,7 +1,7 @@
 <div class="main-container">
  <div class="users-wrapper">
     <div class="img-container">
-      <%= image_tag 'image1.jpg', size:"70x80", alt: "user photo" %>
+      <%= image_tag @user.photo, size:"70x80", alt: "user photo" %>
     </div>
     <div class="user-details">
       <h1><%= @user.name %></h1>
@@ -20,7 +20,7 @@
    <% else %>
    <% @user.recent_posts.each do |post| %>
      <div class="users-post">
-       <h2><%= post.title %></h2>
+       <h2><%= link_to "#{post.title}", user_post_path(@user.id, post.id), class: "link-button" %></h2>
        <p><%= post.text %></p>
        <h4>Comments: <%=post.comments_counter %>, Likes: <%= post.likes_counter %></h4>
      </div>
@@ -30,6 +30,6 @@
     <button class="all-post-button">
       <%= link_to "See all posts", user_posts_path(@user), class: "all-posts" %>
     </button>
-    <button class="create-post-button"type="button"><%= link_to "Create a post", new_user_post_path(@user), class: "create-post"  %></button>
+    <button class="create-post-button" type="button"><%= link_to "Create a post", new_user_post_path(@user), class: "create-post"  %></button>
  <div>
  </div>
