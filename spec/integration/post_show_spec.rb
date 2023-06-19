@@ -16,11 +16,11 @@ RSpec.describe 'User show', type: :feature do
     @post2 = Post.create(author: @user, title: 'Hello2', text: 'This is my second post!')
     @post3 = Post.create(author: @user, title: 'Hello3', text: 'This is my third post!')
     # visit user_path(@user.id)
-    
+
     @comment1 = Comment.create(text: 'First comment', author: @user, post: @post1)
     @comment2 = Comment.create(text: 'Second comment', author: @user, post: @post1)
     @comment3 = Comment.create(text: 'Third comment', author: @user, post: @post1)
-    
+
     @like1 = Like.create(author: @user, post: @post1)
     @like1 = Like.create(author: @user1, post: @post1)
 
@@ -38,7 +38,7 @@ RSpec.describe 'User show', type: :feature do
   scenario 'Show the number of comments for a post' do
     expect(page).to have_content('Comments: 3')
   end
-  
+
   scenario 'Show the number of likes for a post' do
     expect(page).to have_content('Likes: 2')
   end
