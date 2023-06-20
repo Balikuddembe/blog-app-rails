@@ -1,8 +1,21 @@
 <div class='main-container'>
+<div>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "devise-button" %>
+  <% unless user_signed_in? %>
+  <button class=:devise-button>
+    <%= link_to "Log in", new_user_session_path, class: "link-login" %>
+  </button>
+  <% end %>
+</div>
+    
     <% @users.each do |user| %>
         <div class='users-wrapper'>
             <div class='img-container'>
+            <% if user.photo.present? %>
                 <%= image_tag user.photo, size: '70x85' , alt: 'user photo' %>
+                <% else %>
+                <span>No photo available</span>
+                <% end %>
             </div>
             <div class='user-details'>
                 <h1><%= link_to user.name, user, class: 'link-button' %></h1>
