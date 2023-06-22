@@ -11,11 +11,7 @@
     <% @users.each do |user| %>
         <div class='users-wrapper'>
             <div class='img-container'>
-            <% if user.photo.present? %>
-                <%= image_tag user.photo, size: '70x85' , alt: 'user photo' %>
-                <% else %>
-                <span>No photo available</span>
-                <% end %>
+                <%= image_tag 'image1.jpg', size: '70x85' , alt: 'user photo' %>
             </div>
             <div class='user-details'>
                 <h1><%= link_to user.name, user, class: 'link-button' %></h1>
