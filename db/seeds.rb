@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+userOne = User.create(name: "Balix", photo: "https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwZG9nfGVufDB8fDB8fA%3D%3D&w=1000&q=80", bio: "Balix", email: "balixemma@gmail.com", password: "12345678")
+userTwo = User.create(name: "Balix", photo: "https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwZG9nfGVufDB8fDB8fA%3D%3D&w=1000&q=80", bio: "Balix", email: "balixemma@gmail.com", password: "12345678")
+userThree = User.create(name: "Balix", photo: "https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwZG9nfGVufDB8fDB8fA%3D%3D&w=1000&q=80", bio: "Balix", email: "balixemma@gmail.com", password: "12345678")
+userFour = User.create(name: "Balix", photo: "https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwZG9nfGVufDB8fDB8fA%3D%3D&w=1000&q=80", bio: "Balix", email: "balixemma@gmail.com", password: "12345678")
+userFive = User.create(name: "Deodati", photo: "https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwZG9nfGVufDB8fDB8fA%3D%3D&w=1000&q=80", bio: "Deodati", email: "balixemma@gmail.com", password: "12345678")
